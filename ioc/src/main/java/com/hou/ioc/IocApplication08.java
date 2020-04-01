@@ -20,7 +20,5 @@ public class IocApplication08 {
         //发布事件
         context.publishEvent(new MyEvent(new Object()));
         context.close();
-
-
     }
 }

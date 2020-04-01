@@ -14,7 +14,7 @@ public class IocApplication06 {
         ConfigurableApplicationContext context = SpringApplication.run(IocApplication06.class, args);
         System.out.println(context.getBean(TomcatProperties.class));
         context.getBean(Runnable.class).run();
-        System.out.println("-------end");
+        System.out.println("-------end-------");
         context.close();
     }
 

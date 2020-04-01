@@ -6,7 +6,8 @@ import org.springframework.stereotype.Component;
 
 /**
  * CommandLineRunner接口:是容器启动后的最后一步回调
- * 使用步骤: 1 写个类,实现此接口
+ * 使用步骤:
+ * 1 写个类,实现此接口
  * 2 把该类加入Spring中
  * 注意:可以用@Order注解或者Ordered接口来控制多个实现类的执行顺序
  * ApplicationRunner接口与CommandLineRunner接口作用一样:
@@ -19,6 +20,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class ServerSuccessReport implements CommandLineRunner {
     public void run(String... args) throws Exception {
-        System.out.println("应用成功启动===========");
+        System.out.println("==========应用成功启动===========");
     }
 }

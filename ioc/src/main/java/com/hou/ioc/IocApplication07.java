@@ -6,7 +6,6 @@ import com.hou.ioc.customannotation.EnableLog;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
-
 import java.util.HashSet;
 import java.util.Set;
 
@@ -20,7 +19,11 @@ import java.util.Set;
 public class IocApplication07 {
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(IocApplication07.class, args);
+        Employee employee = (Employee)context.getBeansOfType(Employee.class);
+        employee.setId(1);
+        employee.setName("hyp");
         System.out.println(context.getBeansOfType(Employee.class));
+        System.out.println(employee);
         context.close();
     }
 

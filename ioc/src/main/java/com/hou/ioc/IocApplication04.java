@@ -19,7 +19,7 @@ public class IocApplication04 {
         //启动容器
         ConfigurableApplicationContext context = springApplication.run(args);
         //获取对应的配置文件值
-        System.out.println(context.getEnvironment().getProperty("server.port"));
+        System.out.println("服务器端口：" + context.getEnvironment().getProperty("server.port"));
         Runnable runnable = (Runnable) context.getBean(Runnable.class);
         runnable.run();
         context.close();
