@@ -1,0 +1,7 @@
+# 指定端口
+#server.port=8181
+#指定jsp跳转路径前缀与后缀
+#spring.mvc.view.prefix=/WEB-INF/jsp/
+#spring.mvc.view.suffix=.jsp
+#指定静态资源路径
+#spring.resources.staticLocations=classpath:/html/

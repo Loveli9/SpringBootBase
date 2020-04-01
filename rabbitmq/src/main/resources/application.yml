@@ -1,0 +1,15 @@
+spring:
+  rabbitmq:
+    host: 192.168.171.128
+    port: 5672
+    username: admin
+    password: admin
+    publisher-confirms: true # 是否确认发送的消息已经被消费,为true消息接受成功会回调
+    connection-timeout: 60000ms
+# 定义两个队列名称
+rabbit:
+  queue:
+    string: houzheng-string  #发送字符串对垒
+    object: houzhenrg-object #发送对象队列
+server:
+  port: 8080

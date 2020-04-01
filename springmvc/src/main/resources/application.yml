@@ -1,0 +1,8 @@
+server:
+  port: 8080
+spring:
+  servlet:
+    multipart:
+      location: D:/book
+      max-file-size: 5MB
+      max-request-size: 20MB

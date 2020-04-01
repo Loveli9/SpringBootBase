@@ -1,0 +1,5 @@
+database:
+  url: jdbc:mysql://localhost:3307/zz_test
+  userName: root
+  passWord: 123456
+  driveClass: com.mysql.jdbc.Driver

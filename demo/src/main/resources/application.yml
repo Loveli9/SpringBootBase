@@ -1,0 +1,5 @@
+logging:
+  level:
+    com.hou: debug
+server:
+  port: 8080

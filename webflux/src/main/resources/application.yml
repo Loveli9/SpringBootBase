@@ -1,0 +1,13 @@
+spring:
+  data:
+    mongodb:
+      port: 27017
+      username: springboot
+      password: 123456
+      host: 192.168.18.128
+      database: db1
+      authentication-database: admin
+  webflux:
+    date-format: yyyy-MM-dd
+server:
+  port: 8080

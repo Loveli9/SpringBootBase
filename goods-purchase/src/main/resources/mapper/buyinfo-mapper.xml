@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hou.goodspurchase.dao.BuyInfoDao">
+
+
+    <insert id="insertBuyInfo" parameterType="butInfo">
+        insert into buy_info (id,user_id,product_id,num,total_price,buy_time,remark)
+        values (#{id},#{user_id},#{product_id},#{num},#{total_price},#{buy_time},#{remark})
+    </insert>
+</mapper>

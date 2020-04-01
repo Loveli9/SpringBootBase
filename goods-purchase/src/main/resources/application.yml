@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://localhost:3307/springboot?characterEncoding=utf-8&useSSL=false
+    tomcat:
+      min-idle: 10 # 最大等待连接数
+      max-active: 50 #最大连接活动数
+      max-wait: 10000 #最大连接等待毫秒数
+      initial-size: 5 #连接池初始化连接数
+      default-transaction-isolation: 2 # 设置读写提交事务控制
+mybatis:
+  mapper-locations: classpath:mapper/*-mapper.xml #mapper扫描位置,sql语句xml
+  type-aliases-package: com.hou.goodspurchase.pojo #扫描别名,实体类上必须要有@Alias注解,xml中才能直接使用别名,否则用全路径
+  configuration:
+    map-underscore-to-camel-case: true
+server:
+  port: 8080

@@ -1,0 +1,14 @@
+spring:
+  activemq:
+    broker-url: tcp://localhost:61616
+    password: houzheng
+    pool:
+      enabled: true
+      max-connections: 50
+    packages:
+      trust-all: true
+    user: houzheng
+  jms:
+    pub-sub-domain: true
+    template:
+      default-destination: activemq
