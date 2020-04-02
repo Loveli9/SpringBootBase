@@ -45,7 +45,7 @@ public class ConditionConfig {
     }
 
     /**
-     * //@ConditionalOnBean:
+     * @ConditionalOnBean:
      * 根据容器中是否有某个Bean进行装配
      *
      * @ConditionalOnMissingBean: 根据容器中没有某个Bean进行装配

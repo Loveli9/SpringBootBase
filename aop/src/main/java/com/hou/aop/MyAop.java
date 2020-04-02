@@ -9,7 +9,8 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 /**
- * Aop开发流程:1 添加依赖
+ * Aop开发流程:
+ * 1 添加依赖
  * 2 写一个切面,使用@Aspect注解,并在相应方法配置通知(前置,后置,环绕等)
  * 3 这个切面类需要加入容器中
  */
@@ -33,6 +34,6 @@ public class MyAop {
      */
     @After("execution(* com.hou.aop.*.*(..)) && args(user)")
     public void down(JoinPoint point,User user) {
-        System.out.println("----切面类1方法之后:获取到参数:"+user.getName() + point.getTarget().getClass() + point.getArgs());
+        System.out.println("----切面类1方法之后:获取到参数:"+user.getName() +  " || " + point.getTarget().getClass() + point.getArgs());
     }
 }

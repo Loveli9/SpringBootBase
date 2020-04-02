@@ -27,6 +27,5 @@ public class UnfiedConfig implements EnvironmentPostProcessor {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 }
