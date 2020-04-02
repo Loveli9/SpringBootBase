@@ -1,10 +1,8 @@
 package com.hou.mybatis.domain.PO;
 
-import com.hou.mybatis.domain.ENUM.SexEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
 import org.apache.ibatis.type.Alias;
 
 @AllArgsConstructor  //提供全参构造器
