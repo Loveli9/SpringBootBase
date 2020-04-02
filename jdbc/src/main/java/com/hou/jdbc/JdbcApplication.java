@@ -13,7 +13,7 @@ public class JdbcApplication {
 
     public static void main(String[] args) throws SQLException {
 
-        ConfigurableApplicationContext context =SpringApplication.run(JdbcApplication.class, args);
+        ConfigurableApplicationContext context = SpringApplication.run(JdbcApplication.class, args);
         DataSource dataSource = context.getBean(DataSource.class);
         System.out.println(dataSource.getClass());
         //com.zaxxer.hikari.HikariDataSource
@@ -21,7 +21,12 @@ public class JdbcApplication {
         Connection connection = dataSource.getConnection();
         //打印连接的数据库名称
         System.out.println(connection.getCatalog());
-        context.getBean(UserDao.class).insert("6");
+//        context.getBean(UserDao.class).insert("7");
+        try {
+            context.getBean(UserDao.class).addUserBatch("8","9");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         context.close();
     }
 }

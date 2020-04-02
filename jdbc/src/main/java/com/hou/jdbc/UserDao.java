@@ -12,7 +12,7 @@ public class UserDao {
     private JdbcTemplate jdbcTemplate;
 
     public void insert(String id) {
-        String sql = "insert into user(id) values(" + id + ")";
+        String sql = "insert into user(id,name) values(" + id + ",胡亚鹏)";
         jdbcTemplate.execute(sql);
     }
 
@@ -23,7 +23,7 @@ public class UserDao {
     @Transactional(rollbackFor = Exception.class, noRollbackFor = NullPointerException.class)
     public void addUserBatch(String... ids) throws Exception {
         for (String id : ids) {
-            String sql = "insert into user(id) values(" + id + ")";
+            String sql = "insert into user(id,name) values(" + id + ",)";
             jdbcTemplate.execute(sql);
             if (id == "5") {
                 throw new IllegalAccessException();
