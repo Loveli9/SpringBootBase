@@ -39,7 +39,7 @@ public class TestController {
            }
         },"houzheng02").start();
         TimeUnit.SECONDS.sleep(2);
-        System.out.println("------");
+        System.out.println("end");
     }
 
     //死锁测试
