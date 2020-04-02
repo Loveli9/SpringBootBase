@@ -13,8 +13,7 @@ public class SpringmvcApplication extends SpringBootServletInitializer {
     }
 
     @Override//为了打包springboot项目
-    protected SpringApplicationBuilder configure(
-            SpringApplicationBuilder builder) {
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
         return builder.sources(this.getClass());
     }
 

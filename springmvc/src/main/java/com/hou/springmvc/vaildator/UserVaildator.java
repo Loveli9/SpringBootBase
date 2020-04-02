@@ -1,8 +1,6 @@
 package com.hou.springmvc.vaildator;
 
 import com.hou.springmvc.pojo.MyUser;
-import com.hou.springmvc.pojo.User;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.Errors;
@@ -33,4 +31,5 @@ public class UserVaildator implements Validator {
         if(StringUtils.isEmpty(myuser.getName())) errors.rejectValue("id",null,"姓名不能为空");
         //其他参数验证,最后结果统一放入errors,进入controller
     }
+
 }

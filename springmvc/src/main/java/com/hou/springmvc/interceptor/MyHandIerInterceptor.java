@@ -15,19 +15,19 @@ public class MyHandIerInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request,
                              HttpServletResponse response,Object handler) throws Exception {
-        System.out.println("controller之前");
+        System.out.println("controller之前...");
         return true;
     }
     //处理器之后执行
     @Override
     public void postHandle(HttpServletRequest request,
                            HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-        System.out.println("controller之后");
+        System.out.println("controller之后...");
     }
     //处理器完成执行
     @Override
     public void afterCompletion(HttpServletRequest request,
                                 HttpServletResponse response, Object handler, Exception ex) throws Exception {
-        System.out.println("controller完成");
+        System.out.println("controller完成...");
     }
 }
